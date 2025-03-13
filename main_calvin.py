@@ -7,7 +7,6 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys
 
 
-
 def squid_login_test(p_url, p_account_url, p_username, p_password):
 
     try:
@@ -15,7 +14,8 @@ def squid_login_test(p_url, p_account_url, p_username, p_password):
         driver = webdriver.Chrome()
 
         driver.get(p_url)
-        print("Browser Opened at the right url") #this is for debugging to see if I can make it to this part
+        # this is for debugging to see if I can make it to this part
+        print("Browser Opened at the right url")
 
         # Wait for the username field to be present and then enter the username
         username_field = WebDriverWait(driver, 20).until(
@@ -27,7 +27,8 @@ def squid_login_test(p_url, p_account_url, p_username, p_password):
 
         # Wait for the password field and enter the password
         password_field = WebDriverWait(driver, 10).until(
-            EC.presence_of_element_located((By.NAME, "password"))  # password field ID
+            EC.presence_of_element_located(
+                (By.NAME, "password"))  # password field ID
         )
 
         password_field.send_keys(p_password)
@@ -35,7 +36,8 @@ def squid_login_test(p_url, p_account_url, p_username, p_password):
 
         # Wait for the login button and click it
         login_button = WebDriverWait(driver, 20).until(
-            EC.element_to_be_clickable((By.XPATH, "//button[@type='submit']"))   # Login Button XPATH
+            EC.element_to_be_clickable(
+                (By.XPATH, "//button[@type='submit']"))   # Login Button XPATH
         )
 
         login_button.click()
@@ -44,10 +46,10 @@ def squid_login_test(p_url, p_account_url, p_username, p_password):
         # Add a wait here to check for successful login. For example, check for an element on the logged-in page.
 
         try:
-            #WebDriverWait(driver, 20).until(
+            # WebDriverWait(driver, 20).until(
             #    EC.presence_of_element_located((By.XPATH, "//div[contains(text(), 'Portfolio Value')]"))  # Example. Replace with a reliable selector.
-            #)
-            #print("Login successful!")
+            # )
+            # print("Login successful!")
             # Wait for the page to navigate to the desired URL.
             WebDriverWait(driver, 120).until(EC.url_to_be(p_account_url))
 
@@ -61,8 +63,6 @@ def squid_login_test(p_url, p_account_url, p_username, p_password):
 
         except Exception as e:
             print(f"Login might have failed or could not verify login: {e}")
-
-
 
     except Exception as e:
         print(f"Whoopsie! An error occurred: {e}")
