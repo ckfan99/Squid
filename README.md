@@ -8,3 +8,6 @@ Once the balance value has been reviewed, the program will shut down and will ou
 NOTE: Please note that this program will only work on accounts that don't require 2FA/MFA.  In the event that the account is set up with 2FA/MFA the user may be required to manually intervene to get the overview page to appear.
 
 NOTE: This program was based on an assignment I did for a data science course that I took last year, however I did use GeminiAI to help me with some syntax issues that I was having as well as how to grab data from the screen using XPath
+
+NOTE:  This program was created in Windows and it will be necessary to download the ChromeDriver folder from 	https://storage.googleapis.com/chrome-for-testing-public/134.0.6998.88/win32/chromedriver-win32.zip and extract the folder to the folder where the program is located
+
