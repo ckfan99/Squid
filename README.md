@@ -9,5 +9,5 @@ NOTE: Please note that this program will only work on accounts that don't requir
 
 NOTE: This program was based on an assignment I did for a data science course that I took last year, however I did use GeminiAI to help me with some syntax issues that I was having as well as how to grab data from the screen using XPath
 
-NOTE:  This program was created in Windows and it will be necessary to download the ChromeDriver folder from 	https://storage.googleapis.com/chrome-for-testing-public/134.0.6998.88/win32/chromedriver-win32.zip and extract the folder to the folder where the program is located
+NOTE: This program was created in Windows and it will be necessary to download the ChromeDriver folder from https://storage.googleapis.com/chrome-for-testing-public/134.0.6998.88/win32/chromedriver-win32.zip and extract the folder to the folder where the program is located, or whatever chrome driver is necessary for the system it's being run on.  Other versions of the chrome driver can be found here: https://googlechromelabs.github.io/chrome-for-testing/
 
